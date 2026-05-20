@@ -3,106 +3,848 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EVT-SOL</title>
+  <meta
+    name="description"
+    content="EVT-SOL helps organizations improve operations, systems, and execution with practical business solutions."
+  />
+  <meta property="og:title" content="EVT-SOL | Elevate Operating Solution LLC" />
+  <meta
+    property="og:description"
+    content="Operational solutions for teams that need sharper systems, stronger execution, and measurable improvement."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.evt-sol.com/" />
+  <meta property="og:image" content="https://www.evt-sol.com/assets/images/warehouse-systems.jpg" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>EVT-SOL | Elevate Operating Solution LLC</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #f5f7fb, #e9eef7);
-      color: #1f2937;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    :root {
+      --bg: #ffffff;
+      --surface: #f6fbff;
+      --surface-strong: #e8f5ff;
+      --ink: #102033;
+      --muted: #5f7186;
+      --blue: #1769d1;
+      --blue-strong: #0d4ea6;
+      --sky: #4bb9f6;
+      --sky-soft: #dff4ff;
+      --line: #d7e7f5;
+      --shadow: 0 24px 70px rgba(23, 105, 209, 0.14);
     }
 
-    .container {
-      width: 90%;
-      max-width: 760px;
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-      padding: 56px 40px;
-      text-align: center;
+    * {
       box-sizing: border-box;
     }
 
-    .logo {
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #0f766e;
-      margin-bottom: 12px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .subtitle {
-      font-size: 18px;
-      color: #4b5563;
-      margin-bottom: 36px;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
     }
 
-    .status {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: #ecfdf5;
-      color: #047857;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(215, 231, 245, 0.9);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1160px, calc(100% - 40px));
+      min-height: 76px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--ink);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--sky), var(--blue));
+      color: #ffffff;
+      box-shadow: 0 14px 32px rgba(23, 105, 209, 0.24);
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 28px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      background: var(--blue);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      box-shadow: 0 14px 30px rgba(23, 105, 209, 0.22);
+    }
+
+    .button:hover {
+      background: var(--blue-strong);
+      border-color: var(--blue-strong);
+    }
+
+    .button.secondary {
+      background: #ffffff;
+      color: var(--blue);
+      box-shadow: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 84px 0 88px;
+      background:
+        radial-gradient(circle at top left, rgba(75, 185, 246, 0.24), transparent 32%),
+        linear-gradient(180deg, #f7fcff 0%, #ffffff 70%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -22% 44%;
+      height: 360px;
+      border-radius: 999px;
+      background: rgba(75, 185, 246, 0.18);
+      filter: blur(30px);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sky);
+      box-shadow: 0 0 0 6px rgba(75, 185, 246, 0.16);
     }
 
     h1 {
-      font-size: 42px;
-      margin: 0 0 18px 0;
-      color: #111827;
-    }
-
-    p {
-      font-size: 17px;
-      line-height: 1.7;
+      max-width: 740px;
       margin: 0;
-      color: #374151;
+      color: var(--ink);
+      font-size: clamp(44px, 7vw, 82px);
+      line-height: 0.98;
+      letter-spacing: 0;
     }
 
-    .footer {
-      margin-top: 42px;
+    .hero-copy {
+      max-width: 620px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 570px;
+    }
+
+    .image-card {
+      position: absolute;
+      overflow: hidden;
+      border: 10px solid #ffffff;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .image-card.primary {
+      inset: 0 0 86px 70px;
+    }
+
+    .image-card.secondary {
+      left: 0;
+      bottom: 0;
+      width: 48%;
+      min-width: 230px;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-card.primary img {
+      filter: saturate(0.86) brightness(1.08);
+    }
+
+    .image-card.secondary img {
+      aspect-ratio: 4 / 3;
+      filter: saturate(0.82) brightness(1.12);
+    }
+
+    .floating-panel {
+      position: absolute;
+      right: 34px;
+      bottom: 34px;
+      width: min(270px, 58%);
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 18px 42px rgba(16, 32, 51, 0.14);
+      backdrop-filter: blur(14px);
+    }
+
+    .floating-panel strong {
+      display: block;
+      color: var(--blue);
+      font-size: 34px;
+      line-height: 1;
+    }
+
+    .floating-panel span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
       font-size: 14px;
-      color: #6b7280;
+      line-height: 1.5;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 40px 24px;
+    section {
+      padding: 92px 0;
+    }
+
+    .section-blue {
+      background: var(--surface);
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.92fr 1fr;
+      gap: 50px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.04;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service {
+      min-height: 260px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(16, 32, 51, 0.06);
+    }
+
+    .service-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--sky-soft);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .service h3 {
+      margin: 50px 0 14px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.15;
+    }
+
+    .service p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .feature {
+      background: #ffffff;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+      gap: 50px;
+      align-items: center;
+    }
+
+    .feature-media {
+      overflow: hidden;
+      border-radius: 30px;
+      background: var(--surface-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-media img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      filter: saturate(0.85) brightness(1.12);
+    }
+
+    .feature-copy h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(34px, 5vw, 60px);
+      line-height: 1.04;
+    }
+
+    .feature-copy p {
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+
+    .step span {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    .step h3 {
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-size: 19px;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .systems {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .systems-image {
+      overflow: hidden;
+      border-radius: 30px;
+      background: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .systems-image img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      filter: saturate(0.85) brightness(1.1);
+    }
+
+    .systems-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .system-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #ffffff;
+    }
+
+    .system-row strong {
+      color: var(--blue);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .system-row h3 {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 24px;
+    }
+
+    .system-row p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cta {
+      padding: 0;
+      background: #ffffff;
+    }
+
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 74px;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(232, 245, 255, 0.9)),
+        url("assets/images/industrial-hero.jpg") center / cover no-repeat;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.7));
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+    }
+
+    .cta h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(36px, 6vw, 66px);
+      line-height: 1.04;
+    }
+
+    .cta p {
+      max-width: 620px;
+      margin: 24px 0 34px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      background: #ffffff;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
       }
 
-      h1 {
-        font-size: 32px;
+      .hero-inner,
+      .section-heading,
+      .feature-grid,
+      .systems {
+        grid-template-columns: 1fr;
       }
 
-      .logo {
-        font-size: 28px;
+      .hero-visual {
+        min-height: 490px;
+      }
+
+      .image-card.primary {
+        left: 34px;
+      }
+
+      .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .brand span:last-child {
+        display: none;
+      }
+
+      .hero {
+        padding: 58px 0 66px;
+      }
+
+      .hero-inner,
+      .wrap,
+      .footer-inner {
+        width: min(100% - 28px, 1160px);
+      }
+
+      .hero-copy,
+      .cta p {
+        font-size: 16px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .image-card.primary {
+        inset: 0 0 82px 0;
+      }
+
+      .image-card.secondary {
+        width: 56%;
+      }
+
+      .floating-panel {
+        right: 14px;
+        bottom: 22px;
+        width: 62%;
+      }
+
+      section {
+        padding: 68px 0;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        min-height: auto;
+      }
+
+      .service h3 {
+        margin-top: 34px;
+      }
+
+      .system-row,
+      .step {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .cta-panel {
+        padding: 46px 24px;
+        border-radius: 26px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="container">
-    <div class="logo">EVT-SOL</div>
-    <div class="subtitle">Elevate Operating Solution LLC</div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="EVT-SOL home">
+        <span class="brand-mark">EV</span>
+        <span>EVT-SOL</span>
+      </a>
+      <div class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#approach">Approach</a>
+        <a href="#systems">Systems</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="button" href="#contact">Start a Conversation</a>
+    </nav>
+  </header>
 
-    <div class="status">Website Under Construction</div>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">Elevate Operating Solution LLC</div>
+          <h1 id="hero-title">Clear systems for better business operations.</h1>
+          <p class="hero-copy">
+            EVT-SOL helps organizations improve workflows, strengthen operating discipline, and turn practical plans into consistent execution.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Work With EVT-SOL</a>
+            <a class="button secondary" href="#solutions">View Capabilities</a>
+          </div>
+        </div>
 
-    <h1>Coming Soon</h1>
+        <div class="hero-visual" aria-label="EVT-SOL operations imagery">
+          <div class="image-card primary">
+            <img src="assets/images/warehouse-systems.jpg" alt="Organized warehouse systems and operational equipment" />
+          </div>
+          <div class="image-card secondary">
+            <img src="assets/images/precision-work.jpg" alt="Precision work in an industrial setting" />
+          </div>
+          <div class="floating-panel">
+            <strong>3</strong>
+            <span>Core focus areas: process clarity, system alignment, and execution support.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <p>
-      Our public website is currently being prepared.<br />
-      Please check back soon for updates.
-    </p>
+    <section class="section-blue" id="solutions" aria-labelledby="solutions-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="solutions-title">A lighter, cleaner operating partner presence.</h2>
+          <p>
+            The updated visual system moves EVT-SOL into a white, sky-blue, and deep-blue corporate style: open space, soft cards, clear sections, and practical B2B messaging.
+          </p>
+        </div>
 
-    <div class="footer">
-      © 2026 Elevate Operating Solution LLC. All rights reserved.
-    </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-number">01</div>
+            <h3>Operations Strategy</h3>
+            <p>Clarify priorities, operating rhythms, decision paths, and accountability structures.</p>
+          </article>
+          <article class="service">
+            <div class="service-number">02</div>
+            <h3>Process Improvement</h3>
+            <p>Map friction points, remove unnecessary steps, and standardize repeatable work.</p>
+          </article>
+          <article class="service">
+            <div class="service-number">03</div>
+            <h3>Systems Enablement</h3>
+            <p>Align tools, documentation, and workflows so teams can execute without confusion.</p>
+          </article>
+          <article class="service">
+            <div class="service-number">04</div>
+            <h3>Execution Support</h3>
+            <p>Turn recommendations into action plans with owners, milestones, and operating cadence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" id="approach" aria-labelledby="approach-title">
+      <div class="wrap feature-grid">
+        <div class="feature-media">
+          <img src="assets/images/precision-work.jpg" alt="Focused industrial work representing disciplined execution" loading="lazy" />
+        </div>
+        <div class="feature-copy">
+          <div class="eyebrow">How We Work</div>
+          <h2 id="approach-title">Structured discovery. Practical delivery.</h2>
+          <p>
+            EVT-SOL works close to the operating reality of a business. The goal is not more complexity. It is a clearer path from current-state problems to durable execution.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <span>01</span>
+              <div>
+                <h3>Diagnose</h3>
+                <p>Understand workflows, constraints, data gaps, and leadership priorities.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <div>
+                <h3>Design</h3>
+                <p>Create operating practices that are clear enough to use and flexible enough to scale.</p>
+              </div>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <div>
+                <h3>Deploy</h3>
+                <p>Support rollout with documentation, ownership, cadence, and follow-through.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-blue" id="systems" aria-labelledby="systems-title">
+      <div class="wrap systems">
+        <div class="systems-image">
+          <img src="assets/images/warehouse-systems.jpg" alt="Warehouse systems and organized operational equipment" loading="lazy" />
+        </div>
+        <div>
+          <div class="section-heading" style="display: block; margin-bottom: 24px;">
+            <h2 id="systems-title">Systems that make the work easier to run.</h2>
+          </div>
+          <div class="systems-list">
+            <div class="system-row">
+              <strong>Control</strong>
+              <div>
+                <h3>Operating cadence</h3>
+                <p>Meeting rhythms, reporting loops, and action tracking that keep the business aligned.</p>
+              </div>
+            </div>
+            <div class="system-row">
+              <strong>Clarity</strong>
+              <div>
+                <h3>Process documentation</h3>
+                <p>Clean standards and handoffs that reduce rework and make expectations visible.</p>
+              </div>
+            </div>
+            <div class="system-row">
+              <strong>Scale</strong>
+              <div>
+                <h3>Tool alignment</h3>
+                <p>Practical systems support that helps people use technology without slowing down the operation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="cta-panel">
+          <div class="cta-content">
+            <div class="eyebrow">EVT-SOL</div>
+            <h2 id="contact-title">Ready to improve how the work gets done?</h2>
+            <p>
+              Bring EVT-SOL into the conversation when your operation needs sharper workflows, clearer ownership, or a more reliable execution model.
+            </p>
+            <a class="button" href="mailto:info@evt-sol.com">Contact EVT-SOL</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Elevate Operating Solution LLC. All rights reserved.</span>
+      <span>www.evt-sol.com</span>
+    </div>
+  </footer>
 </body>
 </html>
