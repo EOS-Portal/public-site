@@ -7,3 +7,10 @@ These images are local static assets for the EVT-SOL GitHub Pages site.
 - `warehouse-systems.jpg`: Unsplash photo by AFINIS Group / AFINIS GASKET Production. Source: https://unsplash.com/photos/OnbSOhz0oig
 
 The files were resized/compressed for web delivery.
+
+Additional website images extracted from the user-provided company introduction deck:
+
+- `eas-robot-painting.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image16.png`.
+- `eas-door-trim.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image17.png`.
+- `eas-facility.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image26.png`.
+- `eas-premium-interior.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image18.png`.
