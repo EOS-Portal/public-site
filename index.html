@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Elevate Automotive Systems manufactures automotive interior components through injection molding, wrapping, painting, quality control, and finished-goods logistics."
+    content="Elevate Operating Solutions LLC manufactures automotive interior components through injection molding, wrapping, painting, quality control, and finished-goods logistics."
   />
-  <meta property="og:title" content="Elevate Automotive Systems | EVT-SOL" />
+  <meta property="og:title" content="Elevate Operating Solutions LLC | EVT-SOL" />
   <meta
     property="og:description"
     content="Automotive interior component manufacturing built around injection molding, wrapping, painting, quality control, and localized North American supply."
@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://www.evt-sol.com/" />
   <meta property="og:image" content="https://www.evt-sol.com/assets/images/eas-robot-painting.jpg" />
   <meta name="theme-color" content="#ffffff" />
-  <title>Elevate Automotive Systems | EVT-SOL</title>
+  <title>Elevate Operating Solutions LLC | EVT-SOL</title>
   <style>
     :root {
       --bg: #ffffff;
@@ -266,6 +266,7 @@
 
     .image-card.primary {
       inset: 0 0 86px 70px;
+      animation: floatPrimary 8s ease-in-out infinite;
     }
 
     .image-card.secondary {
@@ -273,6 +274,7 @@
       bottom: 0;
       width: 48%;
       min-width: 230px;
+      animation: floatSecondary 7s ease-in-out infinite;
     }
 
     .image-card img {
@@ -316,6 +318,141 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.5;
+    }
+
+    .route-panel {
+      position: absolute;
+      left: 34px;
+      right: 22px;
+      bottom: 24px;
+      padding: 18px;
+      border: 1px solid rgba(215, 231, 245, 0.92);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 22px 52px rgba(16, 32, 51, 0.16);
+      backdrop-filter: blur(16px);
+    }
+
+    .route-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .route-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+
+    .route-status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--sky);
+      box-shadow: 0 0 0 0 rgba(75, 185, 246, 0.45);
+      animation: statusPulse 1.8s ease-out infinite;
+    }
+
+    .route-lane {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      align-items: center;
+    }
+
+    .route-lane::before {
+      content: "";
+      position: absolute;
+      left: 9%;
+      right: 9%;
+      top: 27px;
+      height: 3px;
+      border-radius: 999px;
+      background:
+        linear-gradient(90deg, var(--blue) 0 45%, transparent 45% 55%, var(--sky) 55% 100%);
+      background-size: 220% 100%;
+      opacity: 0.5;
+      animation: flowLine 3.6s linear infinite;
+    }
+
+    .route-step {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 7px;
+      justify-items: center;
+      min-width: 0;
+    }
+
+    .route-step strong {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 2px solid #ffffff;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--blue), var(--sky));
+      color: #ffffff;
+      box-shadow: 0 14px 28px rgba(23, 105, 209, 0.24);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .route-step span {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    @keyframes floatPrimary {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes floatSecondary {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      50% {
+        transform: translateY(8px) translateX(6px);
+      }
+    }
+
+    @keyframes statusPulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(75, 185, 246, 0.45);
+      }
+      100% {
+        box-shadow: 0 0 0 12px rgba(75, 185, 246, 0);
+      }
+    }
+
+    @keyframes flowLine {
+      0% {
+        background-position: 0% 0;
+      }
+      100% {
+        background-position: -220% 0;
+      }
     }
 
     section {
@@ -676,6 +813,27 @@
         width: 62%;
       }
 
+      .route-panel {
+        left: 10px;
+        right: 10px;
+        bottom: 12px;
+        padding: 14px;
+      }
+
+      .route-title {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .route-lane {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .route-lane::before {
+        display: none;
+      }
+
       section {
         padding: 68px 0;
       }
@@ -703,6 +861,16 @@
         border-radius: 26px;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -726,10 +894,10 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div>
-          <div class="eyebrow">Elevate Automotive Systems</div>
+          <div class="eyebrow">Elevate Operating Solutions LLC</div>
           <h1 id="hero-title">Injection, wrapping, and painting for automotive interior parts.</h1>
           <p class="hero-copy">
-            Elevate Automotive Systems manufactures interior components through a clear production flow: plastic injection molding, IMG/wrapping surface treatment, automated painting, inspection, and finished-goods shipment.
+            Elevate Operating Solutions LLC manufactures interior components through a clear production flow: plastic injection molding, IMG/wrapping surface treatment, automated painting, inspection, and finished-goods shipment.
           </p>
           <div class="process-strip" aria-label="Core manufacturing processes">
             <div class="process-chip">
@@ -758,9 +926,33 @@
           <div class="image-card secondary">
             <img src="assets/images/eas-door-trim.jpg" alt="Automotive interior door trim component" />
           </div>
-          <div class="floating-panel">
-            <strong>340+</strong>
-            <span>Manufacturing flow from raw material and production planning to QC, finished goods, and shipment.</span>
+          <div class="route-panel" aria-label="Manufacturing process flow">
+            <div class="route-title">
+              <span>Live Manufacturing Route</span>
+              <span class="route-status">Process Flow</span>
+            </div>
+            <div class="route-lane">
+              <div class="route-step">
+                <strong>INJ</strong>
+                <span>Injection</span>
+              </div>
+              <div class="route-step">
+                <strong>IMG</strong>
+                <span>Wrapping</span>
+              </div>
+              <div class="route-step">
+                <strong>PNT</strong>
+                <span>Painting</span>
+              </div>
+              <div class="route-step">
+                <strong>QC</strong>
+                <span>Inspection</span>
+              </div>
+              <div class="route-step">
+                <strong>FG</strong>
+                <span>Shipment</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -882,7 +1074,7 @@
             <div class="eyebrow">EVT-SOL</div>
             <h2 id="contact-title">Need injection, wrapping, or painting capacity for interior parts?</h2>
             <p>
-              Connect with Elevate Automotive Systems to discuss automotive interior components that require injection molding, IMG/wrapping, automated painting, quality control, and finished-goods shipment.
+              Connect with Elevate Operating Solutions LLC to discuss automotive interior components that require injection molding, IMG/wrapping, automated painting, quality control, and finished-goods shipment.
             </p>
             <a class="button" href="mailto:info@evt-sol.com">Contact Elevate</a>
           </div>
@@ -893,7 +1085,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <span>&copy; 2026 Elevate Automotive Systems. All rights reserved.</span>
+      <span>&copy; 2026 Elevate Operating Solutions LLC. All rights reserved.</span>
       <span>www.evt-sol.com</span>
     </div>
   </footer>
