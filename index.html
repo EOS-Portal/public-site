@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Elevate Automotive Systems is a Georgia-based automotive interior parts manufacturer focused on IMG, automated painting, and module integration."
+    content="Elevate Automotive Systems manufactures automotive interior components through injection molding, wrapping, painting, quality control, and finished-goods logistics."
   />
   <meta property="og:title" content="Elevate Automotive Systems | EVT-SOL" />
   <meta
     property="og:description"
-    content="A Georgia-based manufacturing partner for premium automotive interior components and localized North American supply chains."
+    content="Automotive interior component manufacturing built around injection molding, wrapping, painting, quality control, and localized North American supply."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.evt-sol.com/" />
@@ -215,6 +215,39 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 34px;
+    }
+
+    .process-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 620px;
+      margin-top: 30px;
+    }
+
+    .process-chip {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 12px 28px rgba(23, 105, 209, 0.08);
+    }
+
+    .process-chip strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .process-chip span {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
     }
 
     .hero-visual {
@@ -617,6 +650,10 @@
         flex-direction: column;
       }
 
+      .process-strip {
+        grid-template-columns: 1fr;
+      }
+
       .button {
         width: 100%;
       }
@@ -690,10 +727,24 @@
       <div class="hero-inner">
         <div>
           <div class="eyebrow">Elevate Automotive Systems</div>
-          <h1 id="hero-title">A new manufacturing partner for North American automotive interiors.</h1>
+          <h1 id="hero-title">Injection, wrapping, and painting for automotive interior parts.</h1>
           <p class="hero-copy">
-            Georgia-based Elevate Automotive Systems specializes in premium interior components, high-end IMG surface technology, automated painting, and scalable module integration.
+            Elevate Automotive Systems manufactures interior components through a clear production flow: plastic injection molding, IMG/wrapping surface treatment, automated painting, inspection, and finished-goods shipment.
           </p>
+          <div class="process-strip" aria-label="Core manufacturing processes">
+            <div class="process-chip">
+              <strong>INJ</strong>
+              <span>Injection Molding</span>
+            </div>
+            <div class="process-chip">
+              <strong>IMG</strong>
+              <span>Wrapping / Graining</span>
+            </div>
+            <div class="process-chip">
+              <strong>PNT</strong>
+              <span>Automated Painting</span>
+            </div>
+          </div>
           <div class="hero-actions">
             <a class="button" href="#contact">Discuss Supply Partnership</a>
             <a class="button secondary" href="#solutions">View Capabilities</a>
@@ -709,7 +760,7 @@
           </div>
           <div class="floating-panel">
             <strong>340+</strong>
-            <span>Planned expert workforce across management, quality, production, and manufacturing operations.</span>
+            <span>Manufacturing flow from raw material and production planning to QC, finished goods, and shipment.</span>
           </div>
         </div>
       </div>
@@ -718,32 +769,32 @@
     <section class="section-blue" id="solutions" aria-labelledby="solutions-title">
       <div class="wrap">
         <div class="section-heading">
-          <h2 id="solutions-title">Built around the supply-chain needs of global Tier-1 customers.</h2>
+          <h2 id="solutions-title">What Elevate makes, and how the parts move through production.</h2>
           <p>
-            Elevate is positioned as a localized U.S. manufacturing platform for premium interior parts, reducing import dependency while supporting the fast-growing Southeast automotive cluster.
+            Elevate is a process-centered manufacturer for automotive interior parts. The core routing is simple to understand: injection-molded parts move into wrapping or painting, then through quality control, finished-goods warehousing, and shipment.
           </p>
         </div>
 
         <div class="services">
           <article class="service">
             <div class="service-number">01</div>
-            <h3>High-End IMG</h3>
-            <p>Premium in-mold graining capability that gives molded parts a soft, leather-like interior finish.</p>
+            <h3>Injection Molding</h3>
+            <p>Plastic interior parts are produced through controlled injection operations with POP production tracking, defect capture, and mold shot-count monitoring.</p>
           </article>
           <article class="service">
             <div class="service-number">02</div>
-            <h3>Automated Painting</h3>
-            <p>Robot-based painting operations designed for consistent quality, durability, and visual refinement.</p>
+            <h3>Wrapping / IMG</h3>
+            <p>Surface wrapping and graining processes add premium interior texture using fabric roll control, PDA step checks, and defect management.</p>
           </article>
           <article class="service">
             <div class="service-number">03</div>
-            <h3>Module Integration</h3>
-            <p>Expansion path from treated components to assembled modules with switches, lamps, wiring, and related parts.</p>
+            <h3>Painting</h3>
+            <p>Painted interior parts move through a controlled multi-step painting process with oven monitoring, sequence control, and quality gates.</p>
           </article>
           <article class="service">
             <div class="service-number">04</div>
-            <h3>Localized Supply</h3>
-            <p>Georgia-based production strategy supporting nearby OEM and Tier-1 operations across the Southeast.</p>
+            <h3>Quality & Shipment</h3>
+            <p>In-process inspection, final QC, finished-goods stocking, FIFO picking, and shipment confirmation close the production loop.</p>
           </article>
         </div>
       </div>
@@ -755,32 +806,32 @@
           <img src="assets/images/eas-premium-interior.jpg" alt="Premium automotive interior surface detail" loading="lazy" />
         </div>
         <div class="feature-copy">
-          <div class="eyebrow">Market Timing</div>
-          <h2 id="approach-title">The Southeast automotive cluster is moving toward localized, premium interior production.</h2>
+          <div class="eyebrow">Production Routing</div>
+          <h2 id="approach-title">Two main routings define the manufacturing model.</h2>
           <p>
-            The company introduction highlights three demand drivers: EV production growth in Georgia, higher expectations for premium SUV and EV interiors, and rising demand for resilient local supply partners.
+            The MES design makes the business clearer: some products run through injection and wrapping, while painted interior parts run through injection and painting. Both paths converge into inspection, finished goods, and shipment.
           </p>
 
           <div class="steps">
             <div class="step">
               <span>01</span>
               <div>
-                <h3>Target</h3>
-                <p>Serve Global Tier-1 suppliers near Georgia and Alabama with clear localization needs.</p>
+                <h3>Routing A: INJ → IMG → QC → FG</h3>
+                <p>Door trim, console upper, and wrapped interior components move from injection to wrapping and final quality release.</p>
               </div>
             </div>
             <div class="step">
               <span>02</span>
               <div>
-                <h3>Industrialize</h3>
-                <p>Deploy IMG and automated painting lines for premium interior components.</p>
+                <h3>Routing B: INJ → PNT → QC → FG</h3>
+                <p>Painted injection parts move through painting, oven/process monitoring, quality control, and finished-goods stocking.</p>
               </div>
             </div>
             <div class="step">
               <span>03</span>
               <div>
-                <h3>Scale</h3>
-                <p>Evolve from surface-treated parts to door trim, center console, and full module production.</p>
+                <h3>Closed-loop control</h3>
+                <p>Production results, defects, mold counts, oven status, inspection outcomes, inventory, and shipment events are managed as one manufacturing flow.</p>
               </div>
             </div>
           </div>
@@ -795,28 +846,28 @@
         </div>
         <div>
           <div class="section-heading" style="display: block; margin-bottom: 24px;">
-            <h2 id="systems-title">A staged growth roadmap from parts supply to module production.</h2>
+            <h2 id="systems-title">Manufacturing control points that show what the company actually does.</h2>
           </div>
           <div class="systems-list">
             <div class="system-row">
-              <strong>Phase 1</strong>
+              <strong>INJ</strong>
               <div>
-                <h3>Surface treatment</h3>
-                <p>Supply injection-molded parts with IMG and painted finishes for premium interior applications.</p>
+                <h3>Injection process control</h3>
+                <p>Track POP work, production results, defect rate, mold usage, and line stops around injection-molded interior parts.</p>
               </div>
             </div>
             <div class="system-row">
-              <strong>Phase 2</strong>
+              <strong>IMG</strong>
               <div>
-                <h3>Small module assembly</h3>
-                <p>Add assembly operations to increase value per part and reduce customer-side process burden.</p>
+                <h3>Wrapping process control</h3>
+                <p>Manage fabric roll matching, PDA-based step progress, color checks, and defects for wrapped premium surfaces.</p>
               </div>
             </div>
             <div class="system-row">
-              <strong>Phase 3</strong>
+              <strong>PNT</strong>
               <div>
-                <h3>Complete interior modules</h3>
-                <p>Build toward door trim, center console, and integrated module production with a 2027 revenue target of approximately $50M.</p>
+                <h3>Painting process control</h3>
+                <p>Control a defined painting sequence, oven conditions, rework, defect handling, and final release for painted interior parts.</p>
               </div>
             </div>
           </div>
@@ -829,9 +880,9 @@
         <div class="cta-panel">
           <div class="cta-content">
             <div class="eyebrow">EVT-SOL</div>
-            <h2 id="contact-title">Ready to build a localized interior parts supply partnership?</h2>
+            <h2 id="contact-title">Need injection, wrapping, or painting capacity for interior parts?</h2>
             <p>
-              Connect with Elevate Automotive Systems to discuss IMG, automated painting, interior component production, and module expansion opportunities in the North American automotive supply chain.
+              Connect with Elevate Automotive Systems to discuss automotive interior components that require injection molding, IMG/wrapping, automated painting, quality control, and finished-goods shipment.
             </p>
             <a class="button" href="mailto:info@evt-sol.com">Contact Elevate</a>
           </div>
