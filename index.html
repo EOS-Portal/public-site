@@ -153,6 +153,19 @@
       color: var(--blue);
     }
 
+    .button.small {
+      min-height: 36px;
+      padding: 0 13px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     .hero {
       min-height: 690px;
       display: grid;
@@ -703,7 +716,10 @@
         <a href="#location">Location</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="button" href="#contact">Contact</a>
+      <div class="nav-actions">
+        <a class="button small secondary" href="https://evtsol.sharepoint.com/" target="_blank" rel="noopener noreferrer">Portal</a>
+        <a class="button" href="#contact">Contact</a>
+      </div>
     </nav>
   </header>
 
