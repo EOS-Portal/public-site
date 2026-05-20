@@ -364,26 +364,34 @@
       animation: statusPulse 1.8s ease-out infinite;
     }
 
-    .route-lane {
-      position: relative;
+    .route-branches {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 10px;
-      align-items: center;
     }
 
-    .route-lane::before {
+    .route-branch {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      align-items: start;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(246, 251, 255, 0.9);
+    }
+
+    .route-branch::before {
       content: "";
       position: absolute;
-      left: 9%;
-      right: 9%;
-      top: 27px;
+      left: 12%;
+      right: 12%;
+      top: 38px;
       height: 3px;
       border-radius: 999px;
-      background:
-        linear-gradient(90deg, var(--blue) 0 45%, transparent 45% 55%, var(--sky) 55% 100%);
+      background: linear-gradient(90deg, var(--blue), var(--sky), var(--blue));
       background-size: 220% 100%;
-      opacity: 0.5;
+      opacity: 0.42;
       animation: flowLine 3.6s linear infinite;
     }
 
@@ -391,7 +399,7 @@
       position: relative;
       z-index: 1;
       display: grid;
-      gap: 7px;
+      gap: 6px;
       justify-items: center;
       min-width: 0;
     }
@@ -413,7 +421,7 @@
 
     .route-step span {
       color: var(--ink);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
       text-align: center;
       line-height: 1.25;
@@ -826,11 +834,11 @@
         gap: 5px;
       }
 
-      .route-lane {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .route-branch {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .route-lane::before {
+      .route-branch::before {
         display: none;
       }
 
@@ -928,29 +936,45 @@
           </div>
           <div class="route-panel" aria-label="Manufacturing process flow">
             <div class="route-title">
-              <span>Live Manufacturing Route</span>
-              <span class="route-status">Process Flow</span>
+              <span>Two Manufacturing Routes</span>
+              <span class="route-status">Branch Flow</span>
             </div>
-            <div class="route-lane">
-              <div class="route-step">
-                <strong>INJ</strong>
-                <span>Injection</span>
+            <div class="route-branches">
+              <div class="route-branch">
+                <div class="route-step">
+                  <strong>INJ</strong>
+                  <span>Injection</span>
+                </div>
+                <div class="route-step">
+                  <strong>IMG</strong>
+                  <span>Wrapping</span>
+                </div>
+                <div class="route-step">
+                  <strong>QC</strong>
+                  <span>Inspection</span>
+                </div>
+                <div class="route-step">
+                  <strong>FG</strong>
+                  <span>Shipment</span>
+                </div>
               </div>
-              <div class="route-step">
-                <strong>IMG</strong>
-                <span>Wrapping</span>
-              </div>
-              <div class="route-step">
-                <strong>PNT</strong>
-                <span>Painting</span>
-              </div>
-              <div class="route-step">
-                <strong>QC</strong>
-                <span>Inspection</span>
-              </div>
-              <div class="route-step">
-                <strong>FG</strong>
-                <span>Shipment</span>
+              <div class="route-branch">
+                <div class="route-step">
+                  <strong>INJ</strong>
+                  <span>Injection</span>
+                </div>
+                <div class="route-step">
+                  <strong>PNT</strong>
+                  <span>Painting</span>
+                </div>
+                <div class="route-step">
+                  <strong>QC</strong>
+                  <span>Inspection</span>
+                </div>
+                <div class="route-step">
+                  <strong>FG</strong>
+                  <span>Shipment</span>
+                </div>
               </div>
             </div>
           </div>
