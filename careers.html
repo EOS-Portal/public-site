@@ -118,8 +118,10 @@
       border: 1px solid var(--blue);
       background: var(--blue);
       color: var(--white);
+      font-family: inherit;
       font-size: 14px;
       font-weight: 650;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -527,19 +529,17 @@
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="index.html#top" aria-label="EOS home">
+      <a class="brand" href="index.html" aria-label="EOS home">
         <img class="brand-logo" src="assets/logos/eos-header-logo.svg" alt="EOS Elevate Operating Solutions" />
       </a>
       <div class="nav-links">
-        <a href="index.html#process">Processes</a>
-        <a href="index.html#routing">Routing</a>
-        <a href="index.html#customers">Customers</a>
+        <a href="index.html">Home</a>
         <a href="careers.html" aria-current="page">Careers</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="nav-actions">
         <a class="button small secondary" href="https://evtsol.sharepoint.com/" target="_blank" rel="noopener noreferrer">Portal</a>
-        <a class="button" href="#jobs">Job Search</a>
+        <a class="button" href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
@@ -553,8 +553,8 @@
           Elevate Operating Solutions LLC is building manufacturing teams for injection molding, wrapping, painting, quality, maintenance, logistics, and plant support in central Georgia.
         </p>
         <div class="hero-actions">
-          <a class="button" href="#hourly">Hourly Opportunities</a>
-          <a class="button secondary" href="#salaried">Salaried Opportunities</a>
+          <button class="button" type="button" data-scroll-target="hourly">Hourly Opportunities</button>
+          <button class="button secondary" type="button" data-scroll-target="salaried">Salaried Opportunities</button>
         </div>
       </div>
 
@@ -595,7 +595,7 @@
                 Hourly opportunities support the manufacturing floor: operating production processes, inspecting parts, handling materials, maintaining equipment, and preparing finished goods for shipment.
               </p>
               <div class="track-actions">
-                <a class="button" href="#jobs">View Hourly Jobs</a>
+                <button class="button" type="button" data-scroll-target="jobs">View Hourly Jobs</button>
                 <a class="button secondary" href="apply.html?track=Hourly&role=General%20Career%20Inquiry">Hourly Inquiry</a>
               </div>
             </div>
@@ -612,7 +612,7 @@
                 Salaried opportunities support production through leadership, engineering, quality systems, maintenance planning, supply chain, human resources, finance, safety, and administration.
               </p>
               <div class="track-actions">
-                <a class="button" href="#jobs">View Salaried Jobs</a>
+                <button class="button" type="button" data-scroll-target="jobs">View Salaried Jobs</button>
                 <a class="button secondary" href="apply.html?track=Salaried&role=General%20Career%20Inquiry">Salaried Inquiry</a>
               </div>
             </div>
@@ -728,5 +728,12 @@
       <span>www.evt-sol.com</span>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>

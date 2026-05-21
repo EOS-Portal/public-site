@@ -98,7 +98,8 @@
       font-weight: 600;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
       color: var(--blue);
     }
 
@@ -111,8 +112,10 @@
       border: 1px solid var(--blue);
       background: var(--blue);
       color: var(--white);
+      font-family: inherit;
       font-size: 14px;
       font-weight: 650;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -772,16 +775,12 @@
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="EOS home">
+      <a class="brand" href="index.html" aria-label="EOS home">
         <img class="brand-logo" src="assets/logos/eos-header-logo.svg" alt="EOS Elevate Operating Solutions" />
       </a>
       <div class="nav-links">
-        <a href="#process">Processes</a>
-        <a href="#routing">Routing</a>
-        <a href="#customers">Customers</a>
-        <a href="#quality">Quality</a>
+        <a href="index.html" aria-current="page">Home</a>
         <a href="careers.html">Careers</a>
-        <a href="#location">Location</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="nav-actions">
@@ -800,8 +799,8 @@
           EOS manufactures interior components through controlled injection molding, wrapping, painting, inspection, finished-goods handling, and shipment.
         </p>
         <div class="hero-actions">
-          <a class="button" href="#process">See Manufacturing Processes</a>
-          <a class="button secondary" href="#routing">View Routing</a>
+          <button class="button" type="button" data-scroll-target="process">See Manufacturing Processes</button>
+          <button class="button secondary" type="button" data-scroll-target="routing">View Routing</button>
         </div>
       </div>
 
@@ -1079,5 +1078,12 @@
       <span>www.evt-sol.com</span>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll("[data-scroll-target]").forEach((button) => {
+      button.addEventListener("click", () => {
+        document.getElementById(button.dataset.scrollTarget)?.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
 </body>
 </html>
