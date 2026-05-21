@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733 263" role="img" aria-labelledby="title desc">
+  <title id="title">EOS Elevate Operating Solutions</title>
+  <desc id="desc">EOS corporate logo in navy blue and sky blue.</desc>
+  <defs>
+    <style>
+      .navy { fill: #2b408e; }
+      .sky { fill: #2f9bd3; }
+      .word { fill: #2b408e; font-family: "Arial Black", "Segoe UI Black", Arial, sans-serif; font-weight: 900; letter-spacing: -10px; }
+      .tagline { fill: #2b408e; font-family: "Segoe UI", Arial, sans-serif; font-weight: 700; letter-spacing: 7px; }
+    </style>
+  </defs>
+  <g transform="translate(10 31)">
+    <polygon class="navy" points="46 0 178 0 153 45 78 45 65 72 5 72" />
+    <polygon class="sky" points="31 76 149 76 124 121 64 121 51 145 0 145" />
+    <polygon class="navy" points="41 150 91 150 78 177 34 177" />
+    <polygon class="navy" points="76 132 132 132 108 177 53 177" />
+  </g>
+  <text class="word" x="184" y="189" font-size="215">EOS</text>
+  <text class="tagline" x="203" y="243" font-size="32">ELEVATE OPERATING SOLUTIONS</text>
+</svg>
