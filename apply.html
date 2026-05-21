@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Submit an EOS career inquiry for hourly or salaried opportunities at Elevate Operating Solutions LLC."
+  />
+  <meta property="og:title" content="Apply at EOS | Elevate Operating Solutions LLC" />
+  <meta
+    property="og:description"
+    content="Complete a career inquiry form for hourly or salaried manufacturing opportunities at EOS."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.evt-sol.com/apply.html" />
+  <meta property="og:image" content="https://www.evt-sol.com/assets/images/careers-team.jpg" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
+  <title>Apply at EOS | Elevate Operating Solutions LLC</title>
+  <style>
+    :root {
+      --ink: #101935;
+      --muted: #5d687d;
+      --line: #dce5f5;
+      --blue: #0017cf;
+      --blue-dark: #001095;
+      --sky: #43bcff;
+      --soft: #f6f9ff;
+      --soft-blue: #eaf7ff;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(43, 64, 142, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo {
+      width: auto;
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--blue);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--blue);
+      background: var(--blue);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--blue);
+    }
+
+    .button.secondary:hover {
+      background: var(--soft-blue);
+      color: var(--blue-dark);
+      border-color: var(--blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button.small {
+      min-height: 36px;
+      padding: 0 13px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 88px 0 56px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.88)),
+        url("assets/images/careers-team.jpg") center right / cover no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1 {
+      max-width: 790px;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(40px, 5.8vw, 72px);
+      line-height: 1.03;
+      font-weight: 650;
+    }
+
+    .hero-copy {
+      max-width: 700px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .application-form {
+      display: grid;
+      gap: 24px;
+      padding: 34px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .form-section {
+      display: grid;
+      gap: 18px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .form-section:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .form-section h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 24px;
+      font-weight: 650;
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      font: inherit;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0;
+      padding: 13px 14px;
+    }
+
+    textarea {
+      min-height: 126px;
+      resize: vertical;
+      line-height: 1.6;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid rgba(67, 188, 255, 0.45);
+      border-color: var(--blue);
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .notice,
+    .side-card {
+      border: 1px solid var(--line);
+      background: var(--soft);
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .notice {
+      padding: 18px;
+      font-size: 14px;
+    }
+
+    .notice strong {
+      color: var(--ink);
+    }
+
+    .side-card {
+      padding: 28px;
+      position: sticky;
+      top: 98px;
+    }
+
+    .side-card h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 26px;
+      line-height: 1.18;
+      font-weight: 650;
+    }
+
+    .side-card p {
+      margin: 16px 0 0;
+    }
+
+    .side-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+    }
+
+    .side-list span {
+      display: block;
+    }
+
+    .side-list strong {
+      display: block;
+      color: var(--blue);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .status {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .site-footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      width: 210px;
+      height: auto;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .form-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav,
+      .wrap,
+      .footer-inner {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .brand-logo {
+        height: 38px;
+      }
+
+      .hero {
+        padding: 58px 0 38px;
+      }
+
+      .field-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .application-form {
+        padding: 22px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html#top" aria-label="EOS home">
+        <img class="brand-logo" src="assets/logos/eos-header-logo.svg" alt="EOS Elevate Operating Solutions" />
+      </a>
+      <div class="nav-links">
+        <a href="index.html#process">Processes</a>
+        <a href="index.html#routing">Routing</a>
+        <a href="index.html#customers">Customers</a>
+        <a href="careers.html" aria-current="page">Careers</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button small secondary" href="https://evtsol.sharepoint.com/" target="_blank" rel="noopener noreferrer">Portal</a>
+        <a class="button small" href="careers.html">Open Jobs</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="eyebrow">EOS Career Inquiry</div>
+        <h1 id="hero-title">Tell us where you want to contribute.</h1>
+        <p class="hero-copy">
+          Complete the form below and your email app will open with a formatted message addressed to EOS careers. Review the message, attach a resume if needed, and send it from your email account.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-title">
+      <div class="wrap form-layout">
+        <form class="application-form" id="application-form">
+          <div class="notice">
+            <strong>Static website form:</strong> this page does not store applications on a server. Submitting opens a prepared email to <strong>evan@evt-sol.com</strong> with an internal BCC copy included.
+          </div>
+
+          <div class="form-section">
+            <h2 id="form-title">Personal information</h2>
+            <div class="field-grid">
+              <label>
+                Full name
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email" required />
+              </label>
+              <label>
+                Phone
+                <input name="phone" type="tel" autocomplete="tel" required />
+              </label>
+              <label>
+                City / State
+                <input name="location" autocomplete="address-level2" placeholder="Example: Jackson, GA" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Opportunity details</h2>
+            <div class="field-grid">
+              <label>
+                Job category
+                <select name="track" id="track" required>
+                  <option value="">Select a category</option>
+                  <option>Hourly</option>
+                  <option>Salaried</option>
+                  <option>General Career Inquiry</option>
+                </select>
+              </label>
+              <label>
+                Position of interest
+                <select name="role" id="role" required>
+                  <option value="">Select a position</option>
+                  <option>Production Team Member</option>
+                  <option>Quality and Finished Goods Team Member</option>
+                  <option>Manufacturing / Quality Support</option>
+                  <option>Maintenance Support</option>
+                  <option>Engineering / Operations Support</option>
+                  <option>General Career Inquiry</option>
+                </select>
+              </label>
+              <label>
+                Preferred shift
+                <select name="shift">
+                  <option value="">Select if applicable</option>
+                  <option>Day shift</option>
+                  <option>Night shift</option>
+                  <option>Any shift</option>
+                  <option>Not applicable</option>
+                </select>
+              </label>
+              <label>
+                Earliest start date
+                <input name="startDate" type="date" />
+              </label>
+              <label>
+                Work authorization
+                <select name="authorization">
+                  <option value="">Select one</option>
+                  <option>Authorized to work in the United States</option>
+                  <option>Will require sponsorship</option>
+                  <option>Prefer to discuss</option>
+                </select>
+              </label>
+              <label>
+                Years of relevant experience
+                <select name="experience">
+                  <option value="">Select one</option>
+                  <option>Less than 1 year</option>
+                  <option>1-2 years</option>
+                  <option>3-5 years</option>
+                  <option>6+ years</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2>Background</h2>
+            <div class="field-grid">
+              <label class="full">
+                Relevant manufacturing, quality, maintenance, logistics, or office experience
+                <textarea name="background" placeholder="Tell us about your experience with production, inspection, equipment, inventory, leadership, or support work."></textarea>
+              </label>
+              <label class="full">
+                Additional message
+                <textarea name="message" placeholder="Share availability, questions, referral information, or anything else EOS should know."></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="button" type="submit">Prepare Email Application</button>
+            <a class="button secondary" href="careers.html">Back to Careers</a>
+          </div>
+          <p class="status" id="status" aria-live="polite">
+            After the email opens, attach your resume before sending if you want EOS to receive it.
+          </p>
+        </form>
+
+        <aside class="side-card" aria-labelledby="side-title">
+          <h2 id="side-title">How this submission works.</h2>
+          <p>
+            This static page creates a formatted email from your form answers. No application data is stored on the website.
+          </p>
+          <div class="side-list">
+            <span>
+              <strong>To</strong>
+              evan@evt-sol.com
+            </span>
+            <span>
+              <strong>BCC</strong>
+              Internal careers copy
+            </span>
+            <span>
+              <strong>Resume</strong>
+              Attach it in your email app before sending.
+            </span>
+            <span>
+              <strong>Next Step</strong>
+              EOS will review submitted inquiries and follow up when there is a match.
+            </span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/logos/eos-footer-logo.svg" alt="Elevate Operating Solutions LLC" loading="lazy" />
+      <span>&copy; 2026 Elevate Operating Solutions LLC. All rights reserved.</span>
+      <span>www.evt-sol.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.querySelector("#application-form");
+    const statusMessage = document.querySelector("#status");
+    const roleField = document.querySelector("#role");
+    const trackField = document.querySelector("#track");
+
+    const params = new URLSearchParams(window.location.search);
+    const initialTrack = params.get("track");
+    const initialRole = params.get("role");
+
+    if (initialTrack) {
+      trackField.value = initialTrack;
+    }
+
+    if (initialRole) {
+      roleField.value = initialRole;
+    }
+
+    const formatValue = (formData, key) => formData.get(key)?.trim() || "Not provided";
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const formData = new FormData(form);
+      const name = formatValue(formData, "name");
+      const track = formatValue(formData, "track");
+      const role = formatValue(formData, "role");
+      const subject = `EOS Career Inquiry - ${track} - ${role} - ${name}`;
+      const bodyLines = [
+        "EOS Career Inquiry",
+        "",
+        "Personal Information",
+        `Full Name: ${name}`,
+        `Email: ${formatValue(formData, "email")}`,
+        `Phone: ${formatValue(formData, "phone")}`,
+        `City / State: ${formatValue(formData, "location")}`,
+        "",
+        "Opportunity Details",
+        `Job Category: ${track}`,
+        `Position of Interest: ${role}`,
+        `Preferred Shift: ${formatValue(formData, "shift")}`,
+        `Earliest Start Date: ${formatValue(formData, "startDate")}`,
+        `Work Authorization: ${formatValue(formData, "authorization")}`,
+        `Relevant Experience: ${formatValue(formData, "experience")}`,
+        "",
+        "Background",
+        formatValue(formData, "background"),
+        "",
+        "Additional Message",
+        formatValue(formData, "message"),
+        "",
+        "Resume",
+        "Applicant should attach resume before sending if available."
+      ];
+
+      const mailto = [
+        "mailto:evan@evt-sol.com",
+        `?bcc=${encodeURIComponent("thjo@evt-sol.com")}`,
+        `&subject=${encodeURIComponent(subject)}`,
+        `&body=${encodeURIComponent(bodyLines.join("\n"))}`
+      ].join("");
+
+      statusMessage.textContent = "Opening your email app. Review the message, attach a resume if needed, and send it.";
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
