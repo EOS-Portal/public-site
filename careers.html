@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Careers at Elevate Operating Solutions LLC for salaried and hourly manufacturing roles in automotive interior component production."
+  />
+  <meta property="og:title" content="EOS Careers | Elevate Operating Solutions LLC" />
+  <meta
+    property="og:description"
+    content="Explore salaried and hourly opportunities supporting injection molding, wrapping, painting, quality, and finished-goods operations."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.evt-sol.com/careers.html" />
+  <meta property="og:image" content="https://www.evt-sol.com/assets/images/careers-team.jpg" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg" />
+  <title>EOS Careers | Elevate Operating Solutions LLC</title>
+  <style>
+    :root {
+      --ink: #101935;
+      --muted: #5d687d;
+      --line: #dce5f5;
+      --blue: #0017cf;
+      --blue-dark: #001095;
+      --sky: #43bcff;
+      --soft: #f6f9ff;
+      --soft-blue: #eaf7ff;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(43, 64, 142, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo {
+      width: auto;
+      height: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] {
+      color: var(--blue);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--blue);
+      background: var(--blue);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .button:hover {
+      background: var(--blue-dark);
+      border-color: var(--blue-dark);
+    }
+
+    .button.secondary {
+      background: var(--white);
+      color: var(--blue);
+    }
+
+    .button.secondary:hover {
+      background: var(--soft-blue);
+      color: var(--blue-dark);
+      border-color: var(--blue);
+    }
+
+    .button.small {
+      min-height: 36px;
+      padding: 0 13px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      align-items: end;
+      padding: 96px 0 42px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.86) 42%, rgba(255, 255, 255, 0.18) 100%),
+        url("assets/images/careers-team.jpg") center right / cover no-repeat;
+    }
+
+    .hero-inner,
+    .wrap,
+    .footer-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 40px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(42px, 6.4vw, 78px);
+      line-height: 1.02;
+      letter-spacing: 0;
+      font-weight: 650;
+    }
+
+    .hero-copy {
+      max-width: 650px;
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .career-band {
+      width: min(1180px, calc(100% - 40px));
+      margin: 58px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: var(--shadow);
+    }
+
+    .career-stat {
+      padding: 24px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .career-stat strong {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .career-stat span {
+      display: block;
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .section-soft {
+      background: var(--soft);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.9fr 1fr;
+      gap: 52px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(32px, 4.7vw, 54px);
+      line-height: 1.08;
+      font-weight: 650;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .track-card {
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .track-media {
+      height: 185px;
+      overflow: hidden;
+      background: var(--soft-blue);
+    }
+
+    .track-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.92) brightness(1.08);
+    }
+
+    .track-body {
+      padding: 28px;
+    }
+
+    .track-body strong,
+    .job-card strong {
+      color: var(--sky);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .track-body h3,
+    .job-card h3 {
+      margin: 18px 0 12px;
+      color: var(--ink);
+      font-size: 25px;
+      line-height: 1.18;
+      font-weight: 650;
+    }
+
+    .track-body p,
+    .job-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .track-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .job-board {
+      display: grid;
+      gap: 14px;
+    }
+
+    .job-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px;
+      align-items: center;
+      padding: 26px;
+      border: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .job-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      background: var(--soft);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .benefit-item {
+      min-height: 150px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .benefit-item strong {
+      color: var(--blue);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .benefit-item span {
+      display: block;
+      margin-top: 16px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .cta {
+      padding: 0 0 82px;
+      background: var(--white);
+    }
+
+    .cta-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 44px;
+      align-items: center;
+      padding: 56px 0;
+      border-top: 2px solid var(--blue);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cta h2 {
+      margin: 0;
+      color: var(--ink);
+      font-size: clamp(32px, 4.8vw, 58px);
+      line-height: 1.08;
+      font-weight: 650;
+    }
+
+    .cta p {
+      max-width: 690px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .site-footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      width: 210px;
+      height: auto;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .section-heading,
+      .cta-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .career-band,
+      .benefits-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav,
+      .hero-inner,
+      .career-band,
+      .wrap,
+      .footer-inner {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .brand-logo {
+        height: 38px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 58px 0 26px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.78)),
+          url("assets/images/careers-team.jpg") center / cover no-repeat;
+      }
+
+      .hero-copy,
+      .cta p {
+        font-size: 16px;
+      }
+
+      .hero-actions,
+      .track-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .career-band,
+      .track-grid,
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-card {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html#top" aria-label="EOS home">
+        <img class="brand-logo" src="assets/logos/eos-header-logo.svg" alt="EOS Elevate Operating Solutions" />
+      </a>
+      <div class="nav-links">
+        <a href="index.html#process">Processes</a>
+        <a href="index.html#routing">Routing</a>
+        <a href="index.html#customers">Customers</a>
+        <a href="careers.html" aria-current="page">Careers</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="button small secondary" href="https://evtsol.sharepoint.com/" target="_blank" rel="noopener noreferrer">Portal</a>
+        <a class="button" href="#jobs">Job Search</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="eyebrow">Careers at EOS</div>
+        <h1 id="hero-title">Build automotive parts with a team that welcomes you.</h1>
+        <p class="hero-copy">
+          Elevate Operating Solutions LLC is building manufacturing teams for injection molding, wrapping, painting, quality, maintenance, logistics, and plant support in central Georgia.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#hourly">Hourly Opportunities</a>
+          <a class="button secondary" href="#salaried">Salaried Opportunities</a>
+        </div>
+      </div>
+
+      <div class="career-band" aria-label="Career category overview">
+        <div class="career-stat">
+          <strong>Hourly</strong>
+          <span>Production, quality, maintenance, material handling, and finished-goods support.</span>
+        </div>
+        <div class="career-stat">
+          <strong>Salaried</strong>
+          <span>Engineering, quality leadership, operations, HR, finance, and administration.</span>
+        </div>
+        <div class="career-stat">
+          <strong>Manufacturing Focus</strong>
+          <span>Injection molding, IMG/wrapping, painting, inspection, inventory, and shipment.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft" id="tracks" aria-labelledby="tracks-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="tracks-title">Choose the path that fits your work.</h2>
+          <p>
+            EOS separates openings into hourly and salaried tracks so candidates can quickly find the right starting point. Each posting can later link to an external recruiting system while this public page stays simple and easy to maintain.
+          </p>
+        </div>
+
+        <div class="track-grid">
+          <article class="track-card" id="hourly">
+            <div class="track-media">
+              <img src="assets/images/eas-facility.jpg" alt="Automotive manufacturing facility floor" loading="lazy" />
+            </div>
+            <div class="track-body">
+              <strong>Hourly Roles</strong>
+              <h3>Production and plant team member positions</h3>
+              <p>
+                Hourly opportunities support the manufacturing floor: operating production processes, inspecting parts, handling materials, maintaining equipment, and preparing finished goods for shipment.
+              </p>
+              <div class="track-actions">
+                <a class="button" href="#jobs">View Hourly Jobs</a>
+                <a class="button secondary" href="mailto:info@evt-sol.com?subject=EOS%20Hourly%20Career%20Inquiry">Hourly Inquiry</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="track-card" id="salaried">
+            <div class="track-media">
+              <img src="assets/images/careers-team.jpg" alt="Welcoming manufacturing team member" loading="lazy" />
+            </div>
+            <div class="track-body">
+              <strong>Salaried Roles</strong>
+              <h3>Professional, technical, and administrative positions</h3>
+              <p>
+                Salaried opportunities support production through leadership, engineering, quality systems, maintenance planning, supply chain, human resources, finance, safety, and administration.
+              </p>
+              <div class="track-actions">
+                <a class="button" href="#jobs">View Salaried Jobs</a>
+                <a class="button secondary" href="mailto:info@evt-sol.com?subject=EOS%20Salaried%20Career%20Inquiry">Salaried Inquiry</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="jobs" aria-labelledby="jobs-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="jobs-title">Current openings.</h2>
+          <p>
+            This static job board is ready for current postings. Replace the inquiry links with recruiting-system links when EOS starts managing applications through a dedicated careers platform.
+          </p>
+        </div>
+
+        <div class="job-board">
+          <article class="job-card">
+            <div>
+              <strong>Hourly</strong>
+              <h3>Production Team Member</h3>
+              <p>Support injection molding, wrapping, painting, inspection, finished-goods handling, and shipment readiness.</p>
+              <div class="job-meta">
+                <span class="pill">Jackson, GA</span>
+                <span class="pill">Manufacturing Floor</span>
+                <span class="pill">Shift Work</span>
+              </div>
+            </div>
+            <a class="button" href="mailto:info@evt-sol.com?subject=Application%20Inquiry%20-%20Production%20Team%20Member">Apply / Inquire</a>
+          </article>
+
+          <article class="job-card">
+            <div>
+              <strong>Hourly</strong>
+              <h3>Quality and Finished Goods Team Member</h3>
+              <p>Assist with part inspection, defect handling, FIFO picking, inventory movement, packaging, and shipment confirmation.</p>
+              <div class="job-meta">
+                <span class="pill">Jackson, GA</span>
+                <span class="pill">Quality / Logistics</span>
+                <span class="pill">Hourly</span>
+              </div>
+            </div>
+            <a class="button" href="mailto:info@evt-sol.com?subject=Application%20Inquiry%20-%20Quality%20and%20Finished%20Goods">Apply / Inquire</a>
+          </article>
+
+          <article class="job-card">
+            <div>
+              <strong>Salaried</strong>
+              <h3>Manufacturing / Quality Support</h3>
+              <p>Support production planning, process control, quality systems, reporting, and continuous improvement across EOS manufacturing operations.</p>
+              <div class="job-meta">
+                <span class="pill">Jackson, GA</span>
+                <span class="pill">Operations Support</span>
+                <span class="pill">Salaried</span>
+              </div>
+            </div>
+            <a class="button" href="mailto:info@evt-sol.com?subject=Application%20Inquiry%20-%20Manufacturing%20Quality%20Support">Apply / Inquire</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft" aria-labelledby="benefits-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <h2 id="benefits-title">What candidates can expect.</h2>
+          <p>
+            The page keeps benefits language general until official policy details are ready to publish. This avoids overpromising while still making the opportunity clear.
+          </p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-item">
+            <strong>Training</strong>
+            <span>Manufacturing process orientation and role-specific skill development.</span>
+          </div>
+          <div class="benefit-item">
+            <strong>Team Culture</strong>
+            <span>A plant environment built around respect, communication, and practical problem solving.</span>
+          </div>
+          <div class="benefit-item">
+            <strong>Growth</strong>
+            <span>Opportunities to learn across production, quality, logistics, and support functions.</span>
+          </div>
+          <div class="benefit-item">
+            <strong>Purpose</strong>
+            <span>Work connected to automotive interior components used in visible vehicle programs.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="cta-inner">
+          <div>
+            <div class="eyebrow">Join EOS</div>
+            <h2 id="contact-title">Ready to start a conversation?</h2>
+            <p>
+              Send a career inquiry and include whether you are interested in hourly or salaried opportunities. The public job links can be replaced with a recruiting platform link when available.
+            </p>
+          </div>
+          <a class="button" href="mailto:info@evt-sol.com?subject=EOS%20Career%20Inquiry">Contact Careers</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/logos/eos-footer-logo.svg" alt="Elevate Operating Solutions LLC" loading="lazy" />
+      <span>&copy; 2026 Elevate Operating Solutions LLC. All rights reserved.</span>
+      <span>www.evt-sol.com</span>
+    </div>
+  </footer>
+</body>
+</html>
