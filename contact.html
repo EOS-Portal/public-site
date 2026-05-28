@@ -216,6 +216,41 @@
       box-shadow: var(--shadow);
     }
 
+    .form-embed {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .form-embed .embed-heading {
+      margin: 4px 6px 14px;
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 650;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .form-embed iframe {
+      display: block;
+      width: 100%;
+      height: 2110px;
+      border: 0;
+    }
+
+    @media (max-width: 980px) {
+      .form-embed iframe {
+        height: 2300px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-embed iframe {
+        height: 3100px;
+      }
+    }
+
     .form-section {
       display: grid;
       gap: 18px;
@@ -448,100 +483,30 @@
 
     <section aria-labelledby="form-title">
       <div class="wrap form-layout">
-        <form class="contact-form" id="contact-form">
-          <div class="notice">
-            <strong>Static website form:</strong> this page does not store messages on a server. Submitting opens a prepared email to <strong>evan@evt-sol.com</strong>.
-          </div>
-
-          <div class="form-section">
-            <h2 id="form-title">Contact information</h2>
-            <div class="field-grid">
-              <label>
-                Full name
-                <input name="name" autocomplete="name" required />
-              </label>
-              <label>
-                Company
-                <input name="company" autocomplete="organization" />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label>
-                Phone
-                <input name="phone" type="tel" autocomplete="tel" />
-              </label>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h2>Inquiry details</h2>
-            <div class="field-grid">
-              <label>
-                Inquiry type
-                <select name="inquiryType" required>
-                  <option value="">Select one</option>
-                  <option>New business inquiry</option>
-                  <option>Supplier / customer program discussion</option>
-                  <option>Injection molding capacity</option>
-                  <option>Wrapping / IMG process</option>
-                  <option>Painting process</option>
-                  <option>Quality / finished-goods logistics</option>
-                  <option>General question</option>
-                </select>
-              </label>
-              <label>
-                Process interest
-                <select name="processInterest">
-                  <option value="">Select if applicable</option>
-                  <option>Injection molding</option>
-                  <option>Wrapping / IMG</option>
-                  <option>Painting</option>
-                  <option>Quality control</option>
-                  <option>Finished goods / shipment</option>
-                  <option>Multiple processes</option>
-                </select>
-              </label>
-              <label>
-                Part family
-                <input name="partFamily" placeholder="Example: door trim, console, painted part" />
-              </label>
-              <label>
-                Preferred follow-up
-                <select name="followUp">
-                  <option value="">Select one</option>
-                  <option>Email</option>
-                  <option>Phone</option>
-                  <option>Email or phone</option>
-                </select>
-              </label>
-              <label class="full">
-                Message
-                <textarea name="message" placeholder="Tell us about the program, process needs, expected timing, quality requirements, or questions." required></textarea>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="button" type="submit">Submit Inquiry</button>
-            <a class="button secondary" href="index.html">Back to Site</a>
-          </div>
-          <p class="status" id="status" aria-live="polite">
-            After the email opens, review the message and send it from your email account.
-          </p>
-        </form>
+        <div class="form-embed">
+          <h2 id="form-title" class="embed-heading">Submit your inquiry</h2>
+          <iframe
+            title="EOS Contact / Inquiry form"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=RcPatasz6Ey3B0NwO3vl8OuM3WzDXshAvYE5SsfW3bFUNUtRT0c2VlQ2RlU3S01EMldIMkNTTURKSS4u&amp;embed=true"
+            width="100%"
+            height="1200"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            style="border:0; width:100%; min-height:1200px;"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+            msallowfullscreen>
+          </iframe>
+        </div>
 
         <aside class="side-card" aria-labelledby="side-title">
           <h2 id="side-title">How this contact form works.</h2>
           <p>
-            EOS uses a static website, so this form creates a formatted email from your answers rather than storing the message online.
+            Your inquiry is submitted directly to the EOS team and recorded for review &mdash; no email step required.
           </p>
           <div class="side-list">
-            <span>
-              <strong>To</strong>
-              evan@evt-sol.com
-            </span>
             <span>
               <strong>Best For</strong>
               Manufacturing, supplier, customer, process, and general EOS inquiries.
@@ -564,53 +529,5 @@
     </div>
   </footer>
 
-  <script>
-    const form = document.querySelector("#contact-form");
-    const statusMessage = document.querySelector("#status");
-
-    const formatValue = (formData, key) => formData.get(key)?.trim() || "Not provided";
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (!form.reportValidity()) {
-        return;
-      }
-
-      const formData = new FormData(form);
-      const name = formatValue(formData, "name");
-      const company = formatValue(formData, "company");
-      const inquiryType = formatValue(formData, "inquiryType");
-      const subject = `EOS Contact Inquiry - ${inquiryType} - ${company} - ${name}`;
-      const bodyLines = [
-        "EOS Contact Inquiry",
-        "",
-        "Contact Information",
-        `Full Name: ${name}`,
-        `Company: ${company}`,
-        `Email: ${formatValue(formData, "email")}`,
-        `Phone: ${formatValue(formData, "phone")}`,
-        "",
-        "Inquiry Details",
-        `Inquiry Type: ${inquiryType}`,
-        `Process Interest: ${formatValue(formData, "processInterest")}`,
-        `Part Family: ${formatValue(formData, "partFamily")}`,
-        `Preferred Follow-up: ${formatValue(formData, "followUp")}`,
-        "",
-        "Message",
-        formatValue(formData, "message")
-      ];
-
-      const mailto = [
-        "mailto:evan@evt-sol.com",
-        `?bcc=${encodeURIComponent("thjo@evt-sol.com")}`,
-        `&subject=${encodeURIComponent(subject)}`,
-        `&body=${encodeURIComponent(bodyLines.join("\n"))}`
-      ].join("");
-
-      statusMessage.textContent = "Opening your email app. Review the message and send it.";
-      window.location.href = mailto;
-    });
-  </script>
 </body>
 </html>

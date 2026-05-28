@@ -216,6 +216,41 @@
       box-shadow: var(--shadow);
     }
 
+    .form-embed {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .form-embed .embed-heading {
+      margin: 4px 6px 14px;
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 650;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .form-embed iframe {
+      display: block;
+      width: 100%;
+      height: 2640px;
+      border: 0;
+    }
+
+    @media (max-width: 980px) {
+      .form-embed iframe {
+        height: 2850px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .form-embed iframe {
+        height: 4100px;
+      }
+    }
+
     .form-section {
       display: grid;
       gap: 18px;
@@ -441,136 +476,40 @@
         <div class="eyebrow">EOS Career Inquiry</div>
         <h1 id="hero-title">Tell us where you want to contribute.</h1>
         <p class="hero-copy">
-          Complete the form below and your email app will open with a formatted message addressed to EOS careers. Review the message, attach a resume if needed, and send it from your email account.
+          Complete the form below to submit your career inquiry to EOS. Your responses are recorded directly for review by our team.
         </p>
       </div>
     </section>
 
     <section aria-labelledby="form-title">
       <div class="wrap form-layout">
-        <form class="application-form" id="application-form">
-          <div class="notice">
-            <strong>Static website form:</strong> this page does not store applications on a server. Submitting opens a prepared email to <strong>evan@evt-sol.com</strong>.
-          </div>
-
-          <div class="form-section">
-            <h2 id="form-title">Personal information</h2>
-            <div class="field-grid">
-              <label>
-                Full name
-                <input name="name" autocomplete="name" required />
-              </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email" required />
-              </label>
-              <label>
-                Phone
-                <input name="phone" type="tel" autocomplete="tel" required />
-              </label>
-              <label>
-                City / State
-                <input name="location" autocomplete="address-level2" placeholder="Example: Jackson, GA" />
-              </label>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h2>Opportunity details</h2>
-            <div class="field-grid">
-              <label>
-                Job category
-                <select name="track" id="track" required>
-                  <option value="">Select a category</option>
-                  <option>Hourly</option>
-                  <option>Salaried</option>
-                  <option>General Career Inquiry</option>
-                </select>
-              </label>
-              <label>
-                Position of interest
-                <select name="role" id="role" required>
-                  <option value="">Select a position</option>
-                  <option>Production Team Member</option>
-                  <option>Quality and Finished Goods Team Member</option>
-                  <option>Manufacturing / Quality Support</option>
-                  <option>Maintenance Support</option>
-                  <option>Engineering / Operations Support</option>
-                  <option>General Career Inquiry</option>
-                </select>
-              </label>
-              <label>
-                Preferred shift
-                <select name="shift">
-                  <option value="">Select if applicable</option>
-                  <option>Day shift</option>
-                  <option>Night shift</option>
-                  <option>Any shift</option>
-                  <option>Not applicable</option>
-                </select>
-              </label>
-              <label>
-                Earliest start date
-                <input name="startDate" type="date" />
-              </label>
-              <label>
-                Work authorization
-                <select name="authorization">
-                  <option value="">Select one</option>
-                  <option>Authorized to work in the United States</option>
-                  <option>Will require sponsorship</option>
-                  <option>Prefer to discuss</option>
-                </select>
-              </label>
-              <label>
-                Years of relevant experience
-                <select name="experience">
-                  <option value="">Select one</option>
-                  <option>Less than 1 year</option>
-                  <option>1-2 years</option>
-                  <option>3-5 years</option>
-                  <option>6+ years</option>
-                </select>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h2>Background</h2>
-            <div class="field-grid">
-              <label class="full">
-                Relevant manufacturing, quality, maintenance, logistics, or office experience
-                <textarea name="background" placeholder="Tell us about your experience with production, inspection, equipment, inventory, leadership, or support work."></textarea>
-              </label>
-              <label class="full">
-                Additional message
-                <textarea name="message" placeholder="Share availability, questions, referral information, or anything else EOS should know."></textarea>
-              </label>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="button" type="submit">Application</button>
-            <a class="button secondary" href="careers.html">Back to Careers</a>
-          </div>
-          <p class="status" id="status" aria-live="polite">
-            After the email opens, attach your resume before sending if you want EOS to receive it.
-          </p>
-        </form>
+        <div class="form-embed">
+          <h2 id="form-title" class="embed-heading">Submit your application</h2>
+          <iframe
+            title="EOS Careers / Application form"
+            src="https://forms.office.com/Pages/ResponsePage.aspx?id=RcPatasz6Ey3B0NwO3vl8OuM3WzDXshAvYE5SsfW3bFUN0szQkZUWEdVVE8yM0wwMlA2NkpUMjNXQS4u&amp;embed=true"
+            width="100%"
+            height="1500"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            style="border:0; width:100%; min-height:1500px;"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+            msallowfullscreen>
+          </iframe>
+        </div>
 
         <aside class="side-card" aria-labelledby="side-title">
           <h2 id="side-title">How this submission works.</h2>
           <p>
-            This static page creates a formatted email from your form answers. No application data is stored on the website.
+            Your application is submitted directly to the EOS team and recorded for review &mdash; no email step required.
           </p>
           <div class="side-list">
             <span>
-              <strong>To</strong>
-              evan@evt-sol.com
-            </span>
-            <span>
-              <strong>Resume</strong>
-              Attach it in your email app before sending.
+              <strong>Best For</strong>
+              Hourly and salaried manufacturing, quality, maintenance, and support roles.
             </span>
             <span>
               <strong>Next Step</strong>
@@ -590,75 +529,5 @@
     </div>
   </footer>
 
-  <script>
-    const form = document.querySelector("#application-form");
-    const statusMessage = document.querySelector("#status");
-    const roleField = document.querySelector("#role");
-    const trackField = document.querySelector("#track");
-
-    const params = new URLSearchParams(window.location.search);
-    const initialTrack = params.get("track");
-    const initialRole = params.get("role");
-
-    if (initialTrack) {
-      trackField.value = initialTrack;
-    }
-
-    if (initialRole) {
-      roleField.value = initialRole;
-    }
-
-    const formatValue = (formData, key) => formData.get(key)?.trim() || "Not provided";
-
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (!form.reportValidity()) {
-        return;
-      }
-
-      const formData = new FormData(form);
-      const name = formatValue(formData, "name");
-      const track = formatValue(formData, "track");
-      const role = formatValue(formData, "role");
-      const subject = `EOS Career Inquiry - ${track} - ${role} - ${name}`;
-      const bodyLines = [
-        "EOS Career Inquiry",
-        "",
-        "Personal Information",
-        `Full Name: ${name}`,
-        `Email: ${formatValue(formData, "email")}`,
-        `Phone: ${formatValue(formData, "phone")}`,
-        `City / State: ${formatValue(formData, "location")}`,
-        "",
-        "Opportunity Details",
-        `Job Category: ${track}`,
-        `Position of Interest: ${role}`,
-        `Preferred Shift: ${formatValue(formData, "shift")}`,
-        `Earliest Start Date: ${formatValue(formData, "startDate")}`,
-        `Work Authorization: ${formatValue(formData, "authorization")}`,
-        `Relevant Experience: ${formatValue(formData, "experience")}`,
-        "",
-        "Background",
-        formatValue(formData, "background"),
-        "",
-        "Additional Message",
-        formatValue(formData, "message"),
-        "",
-        "Resume",
-        "Applicant should attach resume before sending if available."
-      ];
-
-      const mailto = [
-        "mailto:evan@evt-sol.com",
-        `?bcc=${encodeURIComponent("thjo@evt-sol.com")}`,
-        `&subject=${encodeURIComponent(subject)}`,
-        `&body=${encodeURIComponent(bodyLines.join("\n"))}`
-      ].join("");
-
-      statusMessage.textContent = "Opening your email app. Review the message, attach a resume if needed, and send it.";
-      window.location.href = mailto;
-    });
-  </script>
 </body>
 </html>
