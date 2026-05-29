@@ -6,6 +6,7 @@ These images are local static assets for the EVT-SOL GitHub Pages site.
 - `precision-work.jpg`: Pexels photo by HONG SON. Source: https://www.pexels.com/photo/industrial-worker-operating-heavy-machinery-indoors-27084594/
 - `warehouse-systems.jpg`: Unsplash photo by AFINIS Group / AFINIS GASKET Production. Source: https://unsplash.com/photos/OnbSOhz0oig
 - `careers-team.jpg`: Pexels photo by EqualStock IN used for the careers page. Source: https://www.pexels.com/photo/smiling-factory-worker-in-textile-plant-32399822/
+- `automotive-injection-parts.jpg`: AI-generated website process image showing generic automotive injection molded plastic parts; created for the EOS public site to avoid implying a specific door-trim product.
 
 The files were resized/compressed for web delivery.
 

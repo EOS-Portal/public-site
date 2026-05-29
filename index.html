@@ -463,86 +463,6 @@
       line-height: 1.7;
     }
 
-    .customers-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .customer-card {
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .customer-brand {
-      min-height: 90px;
-      display: flex;
-      align-items: center;
-      padding: 24px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--white), var(--soft));
-    }
-
-    .customer-brand img {
-      max-width: 148px;
-      max-height: 34px;
-      object-fit: contain;
-    }
-
-    .customer-brand.text {
-      color: var(--blue);
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      line-height: 1.35;
-    }
-
-    .customer-media {
-      height: 135px;
-      overflow: hidden;
-      background: var(--soft-blue);
-    }
-
-    .customer-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(0.9) brightness(1.07);
-    }
-
-    .customer-body {
-      padding: 22px 24px 24px;
-    }
-
-    .customer-body strong {
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-    }
-
-    .customer-body h3 {
-      margin: 18px 0 10px;
-      color: var(--ink);
-      font-size: 21px;
-      font-weight: 650;
-      line-height: 1.2;
-    }
-
-    .customer-body p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
     .quality-band {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -681,7 +601,6 @@
       }
 
       .process-grid,
-      .customers-grid,
       .quality-band {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -760,7 +679,6 @@
       }
 
       .process-grid,
-      .customers-grid,
       .quality-band {
         grid-template-columns: 1fr;
       }
@@ -872,12 +790,12 @@
         <div class="process-grid">
           <article class="process-item">
             <div class="process-media">
-              <img src="assets/images/eas-door-trim.jpg" alt="Automotive interior door trim part" />
+              <img src="assets/images/automotive-injection-parts.jpg" alt="Automotive injection molded plastic parts" />
             </div>
             <div class="process-body">
               <div class="process-code">INJ / Injection</div>
               <h3>Plastic interior part molding</h3>
-              <p>Injection operations produce interior components and track production results, defects, line status, and mold shot counts.</p>
+              <p>Injection operations produce molded plastic housings, brackets, carriers, and related interior components while tracking production results, defects, line status, and mold shot counts.</p>
             </div>
           </article>
 
@@ -924,7 +842,7 @@
               <strong>Route A</strong>
               <div>
                 <h3>INJ -> IMG -> QC -> FG</h3>
-                <p>Wrapped parts such as door trim and console surfaces move from injection into wrapping before inspection and finished-goods release.</p>
+                <p>Wrapped interior surfaces and molded trim carriers move from injection into wrapping before inspection and finished-goods release.</p>
               </div>
             </div>
             <div class="flow-row">
@@ -942,71 +860,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-soft" id="customers" aria-labelledby="customers-title">
-      <div class="wrap">
-        <div class="section-heading">
-          <h2 id="customers-title">Customer programs tied to visible vehicle parts.</h2>
-          <p>
-            EOS supports automotive manufacturing programs connected to Hyundai Motor and Kia vehicle platforms, with a practical focus on door-trim injection, wrapped interior surfaces, painted components, and related bumper supplier workflows.
-          </p>
-        </div>
-
-        <div class="customers-grid">
-          <article class="customer-card">
-            <div class="customer-brand">
-              <img src="assets/logos/hyundai-motor.svg" alt="Hyundai Motor" loading="lazy" />
-            </div>
-            <div class="customer-media">
-              <img src="assets/images/eas-door-trim.jpg" alt="Door trim component for automotive interior program" loading="lazy" />
-            </div>
-            <div class="customer-body">
-              <strong>OEM Program</strong>
-              <h3>Hyundai-related interior components</h3>
-              <p>Manufacturing support for interior part programs where molded door-trim and console-related components require controlled production and inspection.</p>
-            </div>
-          </article>
-
-          <article class="customer-card">
-            <div class="customer-brand">
-              <img src="assets/logos/kia.svg" alt="Kia" loading="lazy" />
-            </div>
-            <div class="customer-media">
-              <img src="assets/images/eas-premium-interior.jpg" alt="Wrapped premium automotive interior surface" loading="lazy" />
-            </div>
-            <div class="customer-body">
-              <strong>OEM Program</strong>
-              <h3>Kia-related trim programs</h3>
-              <p>Interior trim and surface programs connected to Kia vehicle platforms, including wrapped surfaces, color control, inspection, and finished-goods release.</p>
-            </div>
-          </article>
-
-          <article class="customer-card">
-            <div class="customer-brand text">Door Trim Injection</div>
-            <div class="customer-media">
-              <img src="assets/images/eas-door-trim.jpg" alt="Injection molded automotive door trim part" loading="lazy" />
-            </div>
-            <div class="customer-body">
-              <strong>Part Family</strong>
-              <h3>Door-trim molding flow</h3>
-              <p>Injection-molded door-trim components are managed from production tracking through downstream wrapping, quality gates, and shipment readiness.</p>
-            </div>
-          </article>
-
-          <article class="customer-card">
-            <div class="customer-brand text">Bumper Supplier Programs</div>
-            <div class="customer-media">
-              <img src="assets/images/eas-robot-painting.jpg" alt="Automotive component painting process" loading="lazy" />
-            </div>
-            <div class="customer-body">
-              <strong>Supplier Flow</strong>
-              <h3>Painted component coordination</h3>
-              <p>Related bumper supplier work is represented through injection and painting process coordination, oven monitoring, quality checks, and release control.</p>
-            </div>
-          </article>
         </div>
       </div>
     </section>
