@@ -16,4 +16,4 @@ Additional website images extracted from the user-provided company introduction 
 - `eas-door-trim.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image17.png`.
 - `eas-facility.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image26.png`.
 - `eas-premium-interior.jpg`: extracted from `260105 Elevate Automotive Systems company introduction.pptx`, original `ppt/media/image18.png`.
-- `georgia-location.svg`: original simplified location illustration for approximate regional context only; it intentionally does not show or encode a street address.
+- `georgia-location-eos.svg`: original simplified location illustration for approximate regional context only; it intentionally does not show or encode a street address.
